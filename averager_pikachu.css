@@ -369,6 +369,7 @@ html, body {
 	left: -50px;
   width: 60px;
   height: 230px;
+  background: rgba(143, 63, 21, 1);
 	transform-origin: 50% 0%;
 	transform: rotate(-120deg);
 }
@@ -395,10 +396,46 @@ html, body {
 
 .body .tail div:nth-child(4) {
 	position: absolute;
-	top: -270px;
+	top: -273px;
 	left: 200px;
   width: 170px;
   height: 270px;
+	transform-origin: 50% 0%;
+	transform: rotate(-210deg);
+}
+
+.body .tail div:nth-child(5) {
+	position: absolute;
+	top: -251px;
+	left: 200px;
+  width: 35px;
+  height: 35px;
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(249, 255, 5, 1) inset;
+	transform-origin: 50% 0%;
+	transform: rotate(-210deg);
+}
+
+.body .tail div:nth-child(6) {
+	position: absolute;
+	top: -180px;
+	left: 110px;
+  width: 35px;
+  height: 35px;
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(249, 255, 5, 1) inset;
+	transform-origin: 50% 0%;
+	transform: rotate(-210deg);
+}
+
+.body .tail div:nth-child(7) {
+	position: absolute;
+	top: -80px;
+	left: 134px;
+  width: 28px;
+  height: 28px;
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(249, 255, 5, 1) inset;
 	transform-origin: 50% 0%;
 	transform: rotate(-210deg);
 }
