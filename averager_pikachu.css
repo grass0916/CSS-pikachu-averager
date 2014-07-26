@@ -1,0 +1,468 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+#container {
+	position: absolute;
+	top: 200px;
+	left: 300px;
+  margin: 100px auto;
+
+}
+
+/* Head */
+@keyframes headAnimation_A {
+    40% { top: 15px; }
+    70% { top: 0px; }
+    85% { top: 15px; }
+}
+
+.head {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	animation: headAnimation_A 3500ms infinite;
+}
+
+/* Ears */
+.head .ears .left, .head .ears .right {
+  width: 95px;
+  height: 285px;
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 1) inset;
+  border-radius: 75% / 100% 100% 0 0;
+  overflow: hidden;
+}
+
+@keyframes earsAnimation_A {
+    40% { transform: rotate(-120deg); }
+    70% { transform: rotate(-110deg); }
+    85% { transform: rotate(-120deg); }
+}
+
+@keyframes earsAnimation_B {
+    40% { transform: rotate(120deg); }
+    70% { transform: rotate(110deg); }
+    85% { transform: rotate(120deg); }
+}
+
+.head .ears .left {
+	position: relative;
+	top: -250px;
+	left: 44px;
+	transform-origin: 100% 100%;
+	transform: rotate(-120deg);
+	animation: earsAnimation_A 2200ms infinite;
+}
+
+.head .ears .right {
+	position: relative;
+	top: -505px;
+	left: 510px;
+	transform-origin: 0% 100%;
+	transform: rotate(120deg);
+	animation: earsAnimation_B 2200ms infinite;
+}
+
+.head .ears .inner {
+	position: relative;
+	top: -50px;
+	left: -30px;
+  width: 200px;
+  height: 150px;
+  background: rgba(0, 0, 0, 1);
+}
+
+.head .ears .left .inner {
+	transform: rotate(-20deg);
+}
+
+.head .ears .right .inner {
+	transform: rotate(20deg);
+}
+
+/* Face */
+.head .face {
+	position: absolute;
+	top: -40px;
+	left: 100px;
+	transform: rotate(5deg);
+  width: 450px;
+  height: 400px;
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 1) inset;
+  border-radius: 90% 90% 70% 70%;
+}
+
+.head .face .shadow .left, .head .face .shadow .right {
+	width: 63px;
+	height: 63px;
+  background: #F00;
+	box-shadow: 0px 0px 5px 5px #F00;
+  border-radius: 100%;
+}
+
+.head .face .shadow .left {
+	position: absolute;
+	top: 220px;
+	left: 50px;
+}
+
+.head .face .shadow .right {
+	position: absolute;
+	top: 228px;
+	left: 345px;
+}
+
+/* Eyes */
+.head .face .eyes {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+}
+
+.head .face .eyes .left, .head .face .eyes .right {
+  background: rgba(0, 0, 0, 1);
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+.head .face .eyes .left {
+	position: absolute;
+	top: 140px;
+	left: 120px;
+	transform: scale(1, 0.95);
+}
+
+.head .face .eyes .right {
+	position: absolute;
+	top: 140px;
+	left: 280px;
+	transform: scale(1.2, 1.1);
+}
+
+/* Eyes */
+@keyframes eyesAnimation_A {
+  5% { transform: scale(1.2, 0.05); }
+  10% { transform: scale(1, 1); }
+}
+
+.head .face .eyes .left, .head .face .eyes .right {
+	transform-origin: 50% 50%;
+	animation: eyesAnimation_A 4000ms infinite;
+}
+
+.head .face .eyes .left .inner, .head .face .eyes .right .inner {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 100%;
+}
+
+.head .face .eyes .left .inner {
+	position: absolute;
+	top: 8px;
+	left: 12px;
+  width: 13px;
+  height: 13px;
+}
+
+.head .face .eyes .right .inner {
+	position: absolute;
+	top: 8px;
+	left: 12px;
+  width: 13px;
+  height: 13px;
+}
+
+/* Nose */
+.head .face .nose {
+	position: absolute;
+	top: 203px;
+	left: 206px;
+  width: 35px;
+  height: 25px;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 100%;
+}
+
+/* Mouth */
+.head .face .mouth {
+	position: absolute;
+	top: 223px;
+	left: 198px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #999;
+  border-color: transparent transparent transparent #999;
+  border-width: 0 0 0 1px;
+  border-radius: 0 0 50px 50px;
+  background: rgba(222, 0, 5, 1);
+  box-shadow: 0 0 0 7px rgba(0, 0, 0, 1) inset;
+}
+
+.head .face .mouth div {
+  width: 30px;
+  height: 15px;
+  border: 1px solid #999;
+  border-color: transparent #000 #000 #000;
+  border-width: 0 7px 7px 7px;
+  border-radius: 0 0 50px 50px;
+  background: rgba(249, 255, 5, 1);
+}
+
+.head .face .mouth .elementA {
+	position: absolute;
+	top: 0px;
+	left: -16px;
+}
+
+.head .face .mouth .elementB {
+	position: absolute;
+	top: 0px;
+	left: 24px;
+}
+
+/* Body */
+.body {
+  z-index: -1;
+}
+
+.body .main {
+	position: absolute;
+	top: 203px;
+	left: 106px;
+  width: 380px;
+  height: 450px;
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 1) inset;
+  border-radius: 30% 30% 40% 40%;
+  z-index: -1;
+	transform: rotate(6deg);
+}
+
+/* Body - Hand */
+@keyframes handAnimation_A {
+  10% { transform: rotate(100deg); }
+}
+@keyframes handAnimation_B {
+  10% { transform: rotate(-100deg); }
+}
+
+.body .hand .left, .body .hand .right {
+  width: 120px;
+  height: 230px;
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 1) inset;
+  border-radius: 30% 30% 40% 40%;
+  z-index: -1;
+	transform-origin: 50% 0%;
+}
+
+.body .hand .left {
+	position: absolute;
+	top: 283px;
+	left: 96px;
+	transform: rotate(40deg);
+	animation: handAnimation_A 4000ms infinite;
+}
+
+.body .hand .right {
+	position: absolute;
+	top: 313px;
+	left: 406px;
+	transform-origin: 50% 0%;
+	transform: rotate(-40deg);
+	animation: handAnimation_B 4000ms infinite;
+}
+
+/* Weapon in left hand */
+@keyframes weaponAnimation_A {
+  100% { transform: rotate(360deg) }
+}
+#weapon {
+	position: absolute;
+	top: 190px;
+	left: 40px;
+  width: 30px;
+  height: 190px;
+  background: rgba(222, 0, 0, 1);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 1) inset;
+	transform-origin: 50% 0%;
+	animation: weaponAnimation_A 500ms infinite;
+	z-index: 1;
+}
+
+#weapon .elementA {
+	position: absolute;
+	top: 180px;
+	left: -55px;
+  width: 140px;
+  height: 80px;
+  background: rgba(110, 110, 110, 1);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 1) inset;
+}
+
+/* Body - Foot */
+@keyframes footAnimation_A {
+  50% { transform: rotate(150deg); }
+}
+@keyframes footAnimation_B {
+  50% { transform: rotate(-200deg); }
+}
+
+.body .foot .left, .body .foot .right {
+  width: 75px;
+  height: 200px;
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 1) inset;
+  border-radius: 30% 30% 40% 40%;
+  z-index: -1;
+	transform-origin: 50% 0%;
+}
+
+.body .foot .left {
+	position: absolute;
+	top: 620px;
+	left: 136px;
+	transform: rotate(130deg);
+	animation: footAnimation_A 1500ms infinite;
+}
+
+.body .foot .right {
+	position: absolute;
+	top: 650px;
+	left: 376px;
+	transform-origin: 50% 0%;
+	transform: rotate(-220deg);
+	animation: footAnimation_B 1500ms infinite;
+}
+
+/* Equipment - Helmet */
+@keyframes helmetAnimation_A {
+  40% { top: -185px; }
+  70% { top: -200px; }
+  85% { top: -185px; }
+}
+@keyframes helmetAnimation_B {
+  40% { transform: rotate(240deg); }
+}
+@keyframes helmetAnimation_C {
+  40% { transform: scale(1, -1) rotate(50deg); }
+}
+
+.equipment .helmet {
+	position: absolute;
+	top: -200px;
+	left: -150px;
+	animation: helmetAnimation_A 3500ms infinite;
+}
+
+.equipment .feather .left {
+	position: absolute;
+	top: 70px;
+	left: 360px;
+	transform-origin: 0% 50%;
+	transform: rotate(220deg);
+	animation: helmetAnimation_B 1000ms infinite;
+}
+
+.equipment .feather .right {
+	position: absolute;
+	top: 90px;
+	left: 630px;
+	transform-origin: 0% 50%;
+	transform: scale(1, -1) rotate(30deg);
+	animation: helmetAnimation_C 1000ms infinite;
+}
+
+.equipment .feather div div {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 1) inset;
+  border-radius: 100%;
+	transform-origin: 0% 50%;
+}
+
+.equipment .feather div div:first-child {
+	position: relative;
+	top: 0px;
+	left: 0px;
+  width: 100px;
+  height: 40px;
+	transform: rotate(-10deg);
+}
+
+.equipment .feather div div:nth-child(2) {
+	position: relative;
+	top: -20px;
+	left: 0px;
+  width: 120px;
+  height: 40px;
+	transform: rotate(-7deg);
+}
+
+.equipment .feather div div:nth-child(3) {
+	position: relative;
+	top: -37px;
+	left: 0px;
+  width: 150px;
+  height: 40px;
+	transform: rotate(-2deg);
+}
+
+.equipment .feather div div:nth-child(4) {
+	position: relative;
+	top: -58px;
+	left: 0px;
+  width: 185px;
+  height: 40px;
+	transform: rotate(3deg);
+}
+
+.equipment .helmet .main div:first-child {
+	position: relative;
+	top: 210px;
+	left: 266px;
+  width: 443px;
+  height: 70px;
+  background: rgba(120, 120, 120, 1);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 1) inset;
+	transform: rotate(6deg);
+}
+
+.equipment .helmet .main div:nth-child(2) {
+	position: relative;
+	top: -25px;
+	left: 470px;
+	border-left: 37px solid rgba(0, 0, 0, 0);
+	border-bottom: 57px solid rgba(0, 0, 0, 1);
+	border-right: 37px solid rgba(0, 0, 0, 0);
+	display: inline-block;
+	transform: rotate(6deg);
+}
+
+.equipment .helmet .main div:nth-child(3) {
+	position: relative;
+	top: -17px;
+	left: 396px;
+	border-left: 30px solid rgba(0, 0, 0, 0);
+	border-bottom: 50px solid rgba(120, 120, 120, 1);
+	border-right: 30px solid rgba(0, 0, 0, 0);
+	display: inline-block;
+	transform: rotate(6deg);
+}
+.equipment .helmet .main div:nth-child(4) {
+	position: relative;
+	top: -40px;
+	left: 275px;
+  width: 443px;
+  height: 130px;
+  background: rgba(120, 120, 120, 1);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 1) inset;
+  border-radius: 50% / 100% 100% 0 0;
+	transform: rotate(6deg);
+}
