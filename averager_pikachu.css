@@ -16,9 +16,9 @@ html, body {
 
 /* Head */
 @keyframes headAnimation_A {
-    40% { top: 15px; }
-    70% { top: 0px; }
-    85% { top: 15px; }
+  40% { top: 15px; }
+  70% { top: 0px; }
+  85% { top: 15px; }
 }
 
 .head {
@@ -340,6 +340,67 @@ html, body {
 	transform-origin: 50% 0%;
 	transform: rotate(-220deg);
 	animation: footAnimation_B 1500ms infinite;
+}
+
+/* Body - Tail */
+@keyframes tailAnimation_A {
+  30% { transform: rotate(-10deg); }
+  75% { transform: rotate(30deg); }
+}
+.body .tail {
+	position: absolute;
+	top: 550px;
+	left: 420px;
+	width: 10px;
+	height: 10px;
+	z-index: -2;
+	transform-origin: 100% 0%;
+	animation: tailAnimation_A 10500ms infinite;
+}
+
+.body .tail div {
+  background: rgba(249, 255, 5, 1);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 1) inset;
+}
+
+.body .tail div:first-child {
+	position: absolute;
+	top: 0px;
+	left: -50px;
+  width: 60px;
+  height: 230px;
+	transform-origin: 50% 0%;
+	transform: rotate(-120deg);
+}
+
+.body .tail div:nth-child(2) {
+	position: absolute;
+	top: -83px;
+	left: 150px;
+  width: 65px;
+  height: 130px;
+	transform-origin: 50% 0%;
+	transform: rotate(-210deg);
+}
+
+.body .tail div:nth-child(3) {
+	position: absolute;
+	top: -193px;
+	left: 50px;
+  width: 65px;
+  height: 230px;
+	transform-origin: 50% 0%;
+	transform: rotate(-120deg);
+}
+
+.body .tail div:nth-child(4) {
+	position: absolute;
+	top: -270px;
+	left: 200px;
+  width: 170px;
+  height: 270px;
+	transform-origin: 50% 0%;
+	transform: rotate(-210deg);
 }
 
 /* Equipment - Helmet */
